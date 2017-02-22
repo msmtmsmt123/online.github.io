@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Online Blog</title>
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2017-02-22T22:03:57.130Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>Sergey</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hello, World!</title>
+    <link href="http://yoursite.com/2017/02/22/hello-world/"/>
+    <id>http://yoursite.com/2017/02/22/hello-world/</id>
+    <published>2017-02-21T22:00:00.000Z</published>
+    <updated>2017-02-22T22:03:57.130Z</updated>
+    
+    <content type="html"><![CDATA[<p>Тестовый пост.</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Тестовый пост.&lt;/p&gt;
+
+    
+    </summary>
+    
+    
+      <category term="Hexo" scheme="http://yoursite.com/tags/Hexo/"/>
+    
+  </entry>
+  
+</feed>
