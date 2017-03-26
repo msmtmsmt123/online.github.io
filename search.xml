@@ -3,13 +3,6 @@
   
     
     <entry>
-      <title><![CDATA[moy-super-post]]></title>
-      <url>%2F2017%2F03%2F26%2Fmoy-super-post%2F</url>
-      <content type="text"><![CDATA[Здесь текст поста.]]></content>
-    </entry>
-
-    
-    <entry>
       <title><![CDATA[Hello, Hexo!]]></title>
       <url>%2F2017%2F02%2F22%2Fhello-hexo%2F</url>
       <content type="text"><![CDATA[Для себя в Hexo открыл удобную фичу по вставке картинок в материалы. Оказывается, что достаточно в глобальном конфиге установить значение true для строки post_asset_folder, а затем воспользоваться командой hexo new post moy-super-post, что создаст в папке \source\_posts\ файл moy-super-post.md и папку moy-super-post, в которую можно поместить любые файлы, в том числе и изображения, а затем удобно ссылаться на них через встроенный в Hexo плагин: 1&#123;% asset_img Moya-kartinka-dlya-posta.png Описание для картинки %&#125; За данную информацию хочу сказать спасибо официальному сайту Hexo, который, кстати, доступен на русском языке.]]></content>

@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://online.github.io/"/>
-  <updated>2017-03-26T07:26:13.027Z</updated>
+  <updated>2017-02-23T08:50:55.000Z</updated>
   <id>https://online.github.io/</id>
   
   <author>
@@ -14,28 +14,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>moy-super-post</title>
-    <link href="https://online.github.io/2017/03/26/moy-super-post/"/>
-    <id>https://online.github.io/2017/03/26/moy-super-post/</id>
-    <published>2017-03-26T07:26:12.000Z</published>
-    <updated>2017-03-26T07:26:13.027Z</updated>
-    
-    <content type="html"><![CDATA[<p>Здесь текст поста.</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Здесь текст поста.&lt;/p&gt;
-
-    
-    </summary>
-    
-    
-      <category term="post" scheme="https://online.github.io/tags/post/"/>
-    
-  </entry>
   
   <entry>
     <title>Hello, Hexo!</title>
