@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://online.github.io/"/>
-  <updated>2017-02-23T08:50:55.255Z</updated>
+  <updated>2017-03-26T07:26:13.027Z</updated>
   <id>https://online.github.io/</id>
   
   <author>
@@ -16,11 +16,33 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>moy-super-post</title>
+    <link href="https://online.github.io/2017/03/26/moy-super-post/"/>
+    <id>https://online.github.io/2017/03/26/moy-super-post/</id>
+    <published>2017-03-26T07:26:12.000Z</published>
+    <updated>2017-03-26T07:26:13.027Z</updated>
+    
+    <content type="html"><![CDATA[<p>Здесь текст поста.</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Здесь текст поста.&lt;/p&gt;
+
+    
+    </summary>
+    
+    
+      <category term="post" scheme="https://online.github.io/tags/post/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Hello, Hexo!</title>
     <link href="https://online.github.io/2017/02/22/hello-hexo/"/>
     <id>https://online.github.io/2017/02/22/hello-hexo/</id>
     <published>2017-02-21T22:00:00.000Z</published>
-    <updated>2017-02-23T08:50:55.255Z</updated>
+    <updated>2017-02-23T08:50:55.000Z</updated>
     
     <content type="html"><![CDATA[<p>Для себя в <a href="https://hexo.io" target="_blank" rel="external">Hexo</a> открыл удобную фичу по вставке картинок в материалы. Оказывается, что достаточно в глобальном конфиге установить значение <code>true</code> для строки <code>post_asset_folder</code>, а затем воспользоваться командой <code>hexo new post moy-super-post</code>, что создаст в папке <code>\source\_posts\</code> файл <code>moy-super-post.md</code> и папку <code>moy-super-post</code>, в которую можно поместить любые файлы, в том числе и изображения, а затем удобно ссылаться на них через встроенный в Hexo плагин:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;% asset_img Moya-kartinka-dlya-posta.png Описание для картинки %&#125;</div></pre></td></tr></table></figure>
