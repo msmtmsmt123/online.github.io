@@ -2,10 +2,8 @@
 
 
 
-  
 
-
-<html class="theme-next pisces use-motion" lang="ru">
+<html class="theme-next pisces" lang="ru">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -106,9 +104,9 @@
   var CONFIG = {
     root: '/',
     scheme: 'Pisces',
-    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":true,"scrollpercent":true},
     fancybox: true,
-    motion: true,
+    motion: false,
     duoshuo: {
       userId: '0',
       author: 'Автор'
@@ -131,7 +129,7 @@
 
 
 
-  <title>Online Blog</title>
+  <title>Online Blog - Прокачанный блог</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="ru">
@@ -175,7 +173,7 @@
       </a>
     </div>
       
-        <p class="site-subtitle"></p>
+        <h1 class="site-subtitle" itemprop="description">Прокачанный блог</h1>
       
   </div>
 
@@ -221,6 +219,16 @@
               <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
             Теги
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-sitemap">
+          <a href="/sitemap.xml" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br />
+            
+            Карта сайта
           </a>
         </li>
       
@@ -304,9 +312,9 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/02/22/hello-hexo/" itemprop="url">Hello, Hexo!</a></h1>
+                <a class="post-title-link" href="/2017/02/22/hello-hexo/" itemprop="url">Hello, Hexo!</a></h2>
         
 
         <div class="post-meta">
@@ -397,9 +405,9 @@
       
         
           
-            <p>Для себя в <a href="https://hexo.io" target="_blank" rel="external">Hexo</a> открыл удобную фичу по вставке картинок в материалы. Оказывается, что достаточно в глобальном конфиге установить значение <code>true</code> для строки <code>post_asset_folder</code>, а затем воспользоваться командой <code>hexo new post moy-super-post</code>, что создаст в папке <code>\source\_posts\</code> файл <code>moy-super-post.md</code> и папку <code>moy-super-post</code>, в которую можно поместить любые файлы, в том числе и изображения, а затем удобно ссылаться на них через встроенный в Hexo плагин:</p>
+            <p>Для себя в <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv"><i class="fa fa-external-link"></i> Hexo</span> открыл удобную фичу по вставке картинок в материалы. Оказывается, что достаточно в глобальном конфиге установить значение <code>true</code> для строки <code>post_asset_folder</code>, а затем воспользоваться командой <code>hexo new post moy-super-post</code>, что создаст в папке <code>\source\_posts\</code> файл <code>moy-super-post.md</code> и папку <code>moy-super-post</code>, в которую можно поместить любые файлы, в том числе и изображения, а затем удобно ссылаться на них через встроенный в Hexo плагин:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;% asset_img Moya-kartinka-dlya-posta.png Описание для картинки %&#125;</div></pre></td></tr></table></figure>
-<p>За данную информацию хочу сказать спасибо официальному сайту <a href="https://hexo.io/ru/docs/asset-folders.html" target="_blank" rel="external">Hexo</a>, который, кстати, доступен на русском языке.</p>
+<p>За данную информацию хочу сказать спасибо официальному сайту <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL3J1L2RvY3MvYXNzZXQtZm9sZGVycy5odG1s"><i class="fa fa-external-link"></i> Hexo</span>, который, кстати, доступен на русском языке.</p>
 
           
         
@@ -472,7 +480,7 @@
           <p class="site-author-name" itemprop="name">Sergey</p>
            
               <p class="site-description motion-element" itemprop="description"></p>
-          
+           
         </div>
         <nav class="site-state motion-element">
 
@@ -492,7 +500,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">Теги</span>
               </a>
             </div>
@@ -527,6 +535,13 @@
       
 
       
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
 
     </div>
   </aside>
@@ -549,17 +564,6 @@
 </div>
 
 
-<div class="powered-by">
-  Движок - <a class="theme-link" href="https://hexo.io">Hexo</a>
-</div>
-
-<div class="theme-info">
-  Тема -
-  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Pisces
-  </a>
-</div>
-
 
         
 
@@ -567,11 +571,6 @@
       </div>
     </footer>
 
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
     
 
   </div>
@@ -1024,6 +1023,8 @@
 
 
   
+  <script type="text/javascript" src="/js/src/exturl.js?v=5.1.1"></script>
+
 
 </body>
 </html>
