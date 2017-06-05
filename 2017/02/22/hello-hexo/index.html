@@ -11,6 +11,16 @@
 
 
 
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
 
 
 
@@ -109,7 +119,7 @@
   var CONFIG = {
     root: '/',
     scheme: 'Pisces',
-    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":true,"scrollpercent":true},
+    sidebar: {"position":"left","display":"always","offset":12,"offset_float":0,"b2t":true,"scrollpercent":true},
     fancybox: true,
     motion: false,
     duoshuo: {
@@ -221,7 +231,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
-            Теги
+            Тэги
           </a>
         </li>
       
@@ -325,7 +335,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Опубликовано:</span>
+                <span class="post-meta-item-text">Размещено</span>
               
               <time title="Дата создания записи" itemprop="dateCreated datePublished" datetime="2017-02-22T00:00:00+02:00">
                 22.02.2017
@@ -333,7 +343,19 @@
             
 
             
+              <span class="post-meta-divider">|</span>
+            
 
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Дата обновления записи</span>
+              
+              <time title="Дата обновления записи" itemprop="dateModified" datetime="2017-05-28T19:40:24+03:00">
+                28.05.2017
+              </time>
             
           </span>
 
@@ -362,7 +384,9 @@
           
             <div class="post-wordcount">
               
-                <span class="post-meta-divider">|</span>
+                
+                  <span class="post-meta-divider">|</span>
+                
                 <span class="post-meta-item-icon">
                   <i class="fa fa-file-word-o"></i>
                 </span>
@@ -442,7 +466,17 @@
       
 
       
+      
+        <div class="post-widgets">
         
+          <div class="wp_rating">
+            <div id="wpac-rating"></div>
+          </div>
+        
+
+        
+        </div>
+      
       
 
       
@@ -524,8 +558,8 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">2</span>
-                <span class="site-state-item-name">Теги</span>
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">Тэги</span>
               </a>
             </div>
           
@@ -1054,6 +1088,25 @@
   
 
   
+
+  
+  <script type="text/javascript">
+  wpac_init = window.wpac_init || [];
+  wpac_init.push({widget: 'Rating', id: 5730,
+    el: 'wpac-rating',
+    color: 'fc6423'
+  });
+  (function() {
+    if ('WIDGETPACK_LOADED' in window) return;
+    WIDGETPACK_LOADED = true;
+    var mc = document.createElement('script');
+    mc.type = 'text/javascript';
+    mc.async = true;
+    mc.src = '//embed.widgetpack.com/widget.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(mc, s.nextSibling);
+  })();
+  </script>
+
 
   
 
