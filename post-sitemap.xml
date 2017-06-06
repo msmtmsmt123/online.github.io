@@ -7,6 +7,14 @@
     </url>
 
     <url>
+        <loc>https://online.github.io/2017/06/06/emergency-mode-pri-zapuske-ubuntu-16-04/</loc>
+        <lastmod>2017-06-06T21:19:47.936Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://online.github.io/2017/02/22/hello-hexo/</loc>
         <lastmod>2017-05-28T16:40:24.223Z</lastmod>
         <changefreq>weekly</changefreq>
