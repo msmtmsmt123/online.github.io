@@ -45,6 +45,53 @@
   </entry>
   
   <entry>
+    <title>Не работает интернет от Интертелеком на MIUI 8 Global Developer (решение проблемы)</title>
+    <link href="https://online.github.io/2017/03/08/ne-rabotaet-internet-ot-intertelekom-na-miui-8-global-developer/"/>
+    <id>https://online.github.io/2017/03/08/ne-rabotaet-internet-ot-intertelekom-na-miui-8-global-developer/</id>
+    <published>2017-03-08T17:59:58.000Z</published>
+    <updated>2017-06-10T17:08:26.414Z</updated>
+    
+    <content type="html"><![CDATA[<p>На моём смартфоне Redmi 3S Prime установлено две сим-карты: Киевстар (в качестве основной) и Интертелеком (для тех случаев, когда нужен более-менее нормальный интернет за вменяемые деньги). После покупки смартфона я длительное время оставался на стабильной глобальной прошивке, но потом стало интересно попробовать новые плюшки MIUI и я перешёл на девелоперскую глобальную прошивку.</p>
+<a id="more"></a>
+<p>Так получилось, что с января 2017 года мне не нужен был интернет от Интертелеком, поэтому я программно отключил эту сим-карту. С тех пор по OTA без каких-либо проблем устанавливал обновления, вплоть до версии MIUI 8 Global 7.3.2 (еженедельная), но в начале марта мне понадобился интернет от Интертелеком и я активировал карту. Сразу заметил, что в строке состояния индикатор скорости не появлялся, а это означает, что входящие / исходящие пакеты не ходят.</p>
+<p>Я полез на форум 4PDA в профильную тему, и там мне ответили, что, якобы, на девелоперских прошивках CDMA может не работать, что показалось мне очень странным. Так как решение длительное время не удавалось найти, уже хотел вернуться на стабильную прошивку, но тут был рядом с местным отделением Интертелеком и решил зайти. Вкратце рассказал инженеру свою ситуацию и озвучил свои догадки, он взял мой телефон и вместо пустой точки доступа (раньше работало именно так), он создал в <em>Настройки</em> <i class="fa fa-long-arrow-right"></i> <em>SIM-карты и мобильные сети</em> <i class="fa fa-long-arrow-right"></i> <em>Intertelecom</em> <i class="fa fa-long-arrow-right"></i> <em>Точки доступа</em> <i class="fa fa-long-arrow-right"></i> новую точку доступа с такими данными (всё то, что не выделено <mark>жёлтым</mark> — это стандартные значения):</p>
+<p><strong>Имя</strong><br><mark>IT</mark></p>
+<p><strong>APN</strong><br><mark>it.od.ua</mark></p>
+<p><strong>Прокси</strong><br>Не задано</p>
+<p><strong>Порт</strong><br>Не задано</p>
+<p><strong>Имя пользователя</strong><br><mark>IT</mark></p>
+<p><strong>Пароль</strong><br><mark>IT</mark></p>
+<p><strong>Сервер</strong><br>Не задано</p>
+<p><strong>MMSC</strong><br>Не задано</p>
+<p><strong>Прокси-сервер MMS</strong><br>Не задано</p>
+<p><strong>Порт MMS</strong><br>Не задано</p>
+<p><strong>MCC</strong><br>255</p>
+<p><strong>MNC</strong><br>04</p>
+<p><strong>Тип аутентификации</strong><br><mark>PAP или CHAP</mark></p>
+<p><strong>Тип APN</strong><br>Не задано</p>
+<p><strong>Протокол APN</strong><br>IPv4/IPv6</p>
+<p><strong>Протокол APN в роуминге</strong><br>IPv4/IPv6</p>
+<p><strong>Канал</strong><br>Не задано</p>
+<p><strong>Тип MVNO</strong><br>Нет</p>
+<p><strong>Значение MVNO</strong><br>Не задано</p>
+<p><strong>Номер телефона APN PPP</strong><br>Не задано</p>
+<p>Как только эта точка была настроена — интернет тут же заработал! Теперь я снова могу пользоваться интернетом от Интертелеком.</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;На моём смартфоне Redmi 3S Prime установлено две сим-карты: Киевстар (в качестве основной) и Интертелеком (для тех случаев, когда нужен более-менее нормальный интернет за вменяемые деньги). После покупки смартфона я длительное время оставался на стабильной глобальной прошивке, но потом стало интересно попробовать новые плюшки MIUI и я перешёл на девелоперскую глобальную прошивку.&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Android" scheme="https://online.github.io/tags/Android/"/>
+    
+      <category term="MIUI" scheme="https://online.github.io/tags/MIUI/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Hello, Hexo!</title>
     <link href="https://online.github.io/2017/02/22/hello-hexo/"/>
     <id>https://online.github.io/2017/02/22/hello-hexo/</id>
