@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://online.github.io/"/>
-  <updated>2017-06-07T11:26:23.951Z</updated>
+  <updated>2017-06-10T16:53:46.592Z</updated>
   <id>https://online.github.io/</id>
   
   <author>
@@ -16,39 +16,31 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Emergency mode при запуске Ubuntu 16.04</title>
-    <link href="https://online.github.io/2017/06/06/emergency-mode-pri-zapuske-ubuntu-16-04/"/>
-    <id>https://online.github.io/2017/06/06/emergency-mode-pri-zapuske-ubuntu-16-04/</id>
-    <published>2017-06-05T21:00:00.000Z</published>
-    <updated>2017-06-07T11:26:23.951Z</updated>
+    <title>Как зашифровать системный диск с помощью BitLocker</title>
+    <link href="https://online.github.io/2017/03/27/kak-zashifrovat-sistemny-disk-s-pomoschyu-bitlocker/"/>
+    <id>https://online.github.io/2017/03/27/kak-zashifrovat-sistemny-disk-s-pomoschyu-bitlocker/</id>
+    <published>2017-03-27T17:19:07.000Z</published>
+    <updated>2017-06-10T16:53:46.592Z</updated>
     
-    <content type="html"><![CDATA[<p>У меня на ПК установлено две ОС: Windows 10 и Ubuntu 16.04. Оказалось, что после того как я в момент установки Ubuntu настроил монтирование NTFS-разделов, которые использую под Windows, они почему-то не могут корректно смонтироваться в момент загрузки Ubuntu, т. к. что-то происходит в ОС Windows (гибернация, походу, не даёт нормально завершить работу Windows, хотя я её не использую и завершаю работу ОС полностью).</p>
+    <content type="html"><![CDATA[<p>Это быстрая заметка-напоминание для меня, если, вдруг, в будущем понадобиться быстро найти информацию по шифрованию системного раздела с помощью BitLocker.</p>
 <a id="more"></a>
-<p>Короче, если при запуске Ubuntu вы увидите что-то похожее на это:</p>
-<img src="/2017/06/06/emergency-mode-pri-zapuske-ubuntu-16-04/Welcome_to_Emergency_mode.jpg" alt="Фото проблемы" title="Фото проблемы">
-<p>то для начала попробуйте заглянуть в логи, выполнив команду <code>journal -xb</code>, лично у меня там была ошибка монтирования.</p>
-<p>Ниже будет структура моих накопителей:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">/dev/sda (SSD)</div><div class="line">  /dev/sda1 тип: ntfs, (Windows Recovery Environment)</div><div class="line">  /dev/sda2 тип: ntfs, точка подключения: /media/windows (раздел с Windows на SSD)</div><div class="line">/dev/sdb</div><div class="line">  /dev/sdb1 тип: ntfs, точка подключения: /media/2TB (HDD, на который и была установлена Ubuntu)</div><div class="line">  /dev/sdb2 тип: ext4, точка подключения: /boot (298 MB)</div><div class="line">  /dev/sdb5 тип: swap (2046 MB)</div><div class="line">  /dev/sdb6 тип: ext4, точка подключения: / (19998 MB)</div><div class="line">  /dev/sdb7 тип: ext4, точка подключения: /home (30082 MB)</div><div class="line">/dev/sdc</div><div class="line">  /dev/sdc1 тип: ntfs, точка подключения: /media/1TB</div></pre></td></tr></table></figure>
-<p>Первый раз я решил проблему, выполнив команду:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo nano /etc/fstab</div></pre></td></tr></table></figure>
-<p>и закомментировал строку, отвечающую за монтирование NTFS-раздела с Windows, но спустя какое-то время проблема вновь повторилась, поэтому пришлось закомментировать все строки с монтированием NTFS-разделов, вот содержимое моего fstab:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># /etc/fstab: static file system information.</span></div><div class="line"><span class="comment">#</span></div><div class="line"><span class="comment"># Use 'blkid' to print the universally unique identifier for a</span></div><div class="line"><span class="comment"># device; this may be used with UUID= as a more robust way to name devices</span></div><div class="line"><span class="comment"># that works even if disks are added and removed. See fstab(5).</span></div><div class="line"><span class="comment">#</span></div><div class="line"><span class="comment"># &lt;file system&gt; &lt;mount point&gt;   &lt;type&gt;  &lt;options&gt;       &lt;dump&gt;  &lt;pass&gt;</span></div><div class="line"><span class="comment"># / was on /dev/sdb6 during installation</span></div><div class="line">UUID=c9dbc315-2c44-4f85<span class="_">-a</span>77b-27a999fde039 /               ext4    errors=remount-ro 0       1</div><div class="line"><span class="comment"># /home was on /dev/sdb7 during installation</span></div><div class="line">UUID=cb3a3be7-6dc1-4de8-bdcf-85c31b9f04f2 /home           ext4    defaults        0       2</div><div class="line"><span class="comment"># /media/1TB was on /dev/sdc1 during installation</span></div><div class="line"><span class="comment"># UUID=E2581B16581AE955 /media/1TB      ntfs    defaults,umask=007,gid=46 0       0</span></div><div class="line"><span class="comment"># /media/2TB was on /dev/sdb1 during installation</span></div><div class="line"><span class="comment"># UUID=E4AC3886AC3854F0 /media/2TB      ntfs    defaults,umask=007,gid=46 0       0</span></div><div class="line"><span class="comment"># /media/windows was on /dev/sda2 during installation</span></div><div class="line"><span class="comment"># UUID=AA222B83222B541B /media/windows  ntfs    defaults,umask=007,gid=46 0       0</span></div><div class="line"><span class="comment"># swap was on /dev/sdb5 during installation</span></div><div class="line">UUID=02104584<span class="_">-e</span>1e0-4f04-afc3-bb67d2c6e7e9 none            swap    sw              0       0</div></pre></td></tr></table></figure>
-<p>Если вам всё же нужен будет какой-то NTFS-раздел, вы можете в любое время смонтировать его в режиме read-only (пример команды):</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo mount -t ntfs-3g -o ro /dev/sda2 /media/windows</div></pre></td></tr></table></figure>
-<h3 id="Полезные-ссылки-по-теме"><a href="#Полезные-ссылки-по-теме" class="headerlink" title="Полезные ссылки по теме"></a>Полезные ссылки по теме</h3><ul>
-<li><a href="http://forum.ubuntu.ru/index.php?topic=276983.0" target="_blank" rel="external">Welcome to emergency mode!” после установки Ubuntu 16.04 рядом с Windows 10</a></li>
-<li><a href="http://askubuntu.com/questions/145902/unable-to-mount-windows-ntfs-filesystem-due-to-hibernation" target="_blank" rel="external">Unable to mount Windows (NTFS) filesystem due to hibernation</a></li>
+<p>Если ОС не разрешает включить BitLocker (так было у меня на Windows 10, версия enterprise) — необходимо с помощью комбинации клавиш <kbd>Win</kbd> + <kbd>R</kbd> вызвать окно «Выполнить» и в нём прописать <code>gpedit.msc</code> (команда вызовет редактор локальной групповой политики).</p>
+<p>Затем перейдите по пути <em>Политика “Локальный компьютер”</em> <i class="fa fa-long-arrow-right"></i> <em>Административные шаблоны</em> <i class="fa fa-long-arrow-right"></i> <em>Компоненты Windows</em> <i class="fa fa-long-arrow-right"></i> <em>Шифрование диска BitLocker</em> <i class="fa fa-long-arrow-right"></i> <em>Диски операционной системы</em> <i class="fa fa-long-arrow-right"></i> дважды кликните по параметру <em>Настроить требование дополнительной проверки подлинности при запуске</em> <i class="fa fa-long-arrow-right"></i> выберите «Включено»:</p>
+<img src="/2017/03/27/kak-zashifrovat-sistemny-disk-s-pomoschyu-bitlocker/BitLocker.png" alt="Включаем BitLocker" title="Включаем BitLocker">
+<p>После этого можно перейти в панель управления <i class="fa fa-long-arrow-right"></i> «Шифрование диска BitLocker» и включить BitLocker.</p>
+<h3 id="Полезные-ссылки"><a href="#Полезные-ссылки" class="headerlink" title="Полезные ссылки"></a>Полезные ссылки</h3><ul>
+<li><span class="exturl" data-url="aHR0cHM6Ly94YWtlcC5ydS8yMDE2LzAzLzA4L2VuY3J5cHRpb24tc3BlZWQtdGVzdC8="><i class="fa fa-external-link"></i> Шифрование и скорость. Сравнительный тест средств шифрования диска</span> — если просит подписку для последней части материала — воспользуйтесь Google по такому же поисковому запросу.</li>
 </ul>
 ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;У меня на ПК установлено две ОС: Windows 10 и Ubuntu 16.04. Оказалось, что после того как я в момент установки Ubuntu настроил монтирование NTFS-разделов, которые использую под Windows, они почему-то не могут корректно смонтироваться в момент загрузки Ubuntu, т. к. что-то происходит в ОС Windows (гибернация, походу, не даёт нормально завершить работу Windows, хотя я её не использую и завершаю работу ОС полностью).&lt;/p&gt;
+      &lt;p&gt;Это быстрая заметка-напоминание для меня, если, вдруг, в будущем понадобиться быстро найти информацию по шифрованию системного раздела с помощью BitLocker.&lt;/p&gt;
     
     </summary>
     
     
-      <category term="Ubuntu" scheme="https://online.github.io/tags/Ubuntu/"/>
+      <category term="Windows" scheme="https://online.github.io/tags/Windows/"/>
     
   </entry>
   
@@ -72,6 +64,43 @@
     
     
       <category term="Hexo" scheme="https://online.github.io/tags/Hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Emergency mode при запуске Ubuntu 16.04</title>
+    <link href="https://online.github.io/2017/01/28/emergency-mode-pri-zapuske-ubuntu-16-04/"/>
+    <id>https://online.github.io/2017/01/28/emergency-mode-pri-zapuske-ubuntu-16-04/</id>
+    <published>2017-01-27T22:00:00.000Z</published>
+    <updated>2017-06-10T16:55:09.783Z</updated>
+    
+    <content type="html"><![CDATA[<p>У меня на ПК установлено две ОС: Windows 10 и Ubuntu 16.04. Оказалось, что после того как я в момент установки Ubuntu настроил монтирование NTFS-разделов, которые использую под Windows, они почему-то не могут корректно смонтироваться в момент загрузки Ubuntu, т. к. что-то происходит в ОС Windows (гибернация, походу, не даёт нормально завершить работу Windows, хотя я её не использую и завершаю работу ОС полностью).</p>
+<a id="more"></a>
+<p>Короче, если при запуске Ubuntu вы увидите что-то похожее на это:</p>
+
+<p>то для начала попробуйте заглянуть в логи, выполнив команду <code>journal -xb</code>, лично у меня там была ошибка монтирования.</p>
+<p>Ниже будет структура моих накопителей:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">/dev/sda (SSD)</div><div class="line">  /dev/sda1 тип: ntfs, (Windows Recovery Environment)</div><div class="line">  /dev/sda2 тип: ntfs, точка подключения: /media/windows (раздел с Windows на SSD)</div><div class="line">/dev/sdb</div><div class="line">  /dev/sdb1 тип: ntfs, точка подключения: /media/2TB (HDD, на который и была установлена Ubuntu)</div><div class="line">  /dev/sdb2 тип: ext4, точка подключения: /boot (298 MB)</div><div class="line">  /dev/sdb5 тип: swap (2046 MB)</div><div class="line">  /dev/sdb6 тип: ext4, точка подключения: / (19998 MB)</div><div class="line">  /dev/sdb7 тип: ext4, точка подключения: /home (30082 MB)</div><div class="line">/dev/sdc</div><div class="line">  /dev/sdc1 тип: ntfs, точка подключения: /media/1TB</div></pre></td></tr></table></figure>
+<p>Первый раз я решил проблему, выполнив команду:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo nano /etc/fstab</div></pre></td></tr></table></figure>
+<p>и закомментировал строку, отвечающую за монтирование NTFS-раздела с Windows, но спустя какое-то время проблема вновь повторилась, поэтому пришлось закомментировать все строки с монтированием NTFS-разделов, вот содержимое моего fstab:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># /etc/fstab: static file system information.</span></div><div class="line"><span class="comment">#</span></div><div class="line"><span class="comment"># Use 'blkid' to print the universally unique identifier for a</span></div><div class="line"><span class="comment"># device; this may be used with UUID= as a more robust way to name devices</span></div><div class="line"><span class="comment"># that works even if disks are added and removed. See fstab(5).</span></div><div class="line"><span class="comment">#</span></div><div class="line"><span class="comment"># &lt;file system&gt; &lt;mount point&gt;   &lt;type&gt;  &lt;options&gt;       &lt;dump&gt;  &lt;pass&gt;</span></div><div class="line"><span class="comment"># / was on /dev/sdb6 during installation</span></div><div class="line">UUID=c9dbc315-2c44-4f85<span class="_">-a</span>77b-27a999fde039 /               ext4    errors=remount-ro 0       1</div><div class="line"><span class="comment"># /home was on /dev/sdb7 during installation</span></div><div class="line">UUID=cb3a3be7-6dc1-4de8-bdcf-85c31b9f04f2 /home           ext4    defaults        0       2</div><div class="line"><span class="comment"># /media/1TB was on /dev/sdc1 during installation</span></div><div class="line"><span class="comment"># UUID=E2581B16581AE955 /media/1TB      ntfs    defaults,umask=007,gid=46 0       0</span></div><div class="line"><span class="comment"># /media/2TB was on /dev/sdb1 during installation</span></div><div class="line"><span class="comment"># UUID=E4AC3886AC3854F0 /media/2TB      ntfs    defaults,umask=007,gid=46 0       0</span></div><div class="line"><span class="comment"># /media/windows was on /dev/sda2 during installation</span></div><div class="line"><span class="comment"># UUID=AA222B83222B541B /media/windows  ntfs    defaults,umask=007,gid=46 0       0</span></div><div class="line"><span class="comment"># swap was on /dev/sdb5 during installation</span></div><div class="line">UUID=02104584<span class="_">-e</span>1e0-4f04-afc3-bb67d2c6e7e9 none            swap    sw              0       0</div></pre></td></tr></table></figure>
+<p>Если вам всё же нужен будет какой-то NTFS-раздел, вы можете в любое время смонтировать его в режиме read-only (пример команды):</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo mount -t ntfs-3g -o ro /dev/sda2 /media/windows</div></pre></td></tr></table></figure>
+<h3 id="Полезные-ссылки-по-теме"><a href="#Полезные-ссылки-по-теме" class="headerlink" title="Полезные ссылки по теме"></a>Полезные ссылки по теме</h3><ul>
+<li><a href="http://forum.ubuntu.ru/index.php?topic=276983.0" target="_blank" rel="external">Welcome to emergency mode!” после установки Ubuntu 16.04 рядом с Windows 10</a></li>
+<li><a href="http://askubuntu.com/questions/145902/unable-to-mount-windows-ntfs-filesystem-due-to-hibernation" target="_blank" rel="external">Unable to mount Windows (NTFS) filesystem due to hibernation</a></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;У меня на ПК установлено две ОС: Windows 10 и Ubuntu 16.04. Оказалось, что после того как я в момент установки Ubuntu настроил монтирование NTFS-разделов, которые использую под Windows, они почему-то не могут корректно смонтироваться в момент загрузки Ubuntu, т. к. что-то происходит в ОС Windows (гибернация, походу, не даёт нормально завершить работу Windows, хотя я её не использую и завершаю работу ОС полностью).&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Ubuntu" scheme="https://online.github.io/tags/Ubuntu/"/>
     
   </entry>
   
