@@ -1724,7 +1724,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ffffb5;
+  background: #777eb6;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2907,4 +2907,12 @@ kbd {
   background: #f4f4f4;
   border-radius: 4px;
   box-shadow: 0 1px 0 rgba(0,0,0,0.2), 0 1px 0 0 #fff inset;
+}
+mark {
+  padding: 0 4px;
+  background: #fff3bc;
+  font-weight: inherit;
+  font-style: inherit;
+  position: relative;
+  white-space: pre-wrap;
 }
