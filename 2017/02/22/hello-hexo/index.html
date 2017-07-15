@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 
 
 
@@ -10,13 +10,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
 
-
-  
-  
-    
-    
-  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
-  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
 
 
 
@@ -137,7 +130,7 @@
   var CONFIG = {
     root: '/',
     scheme: 'Pisces',
-    sidebar: {"position":"left","display":"always","offset":12,"offset_float":0,"b2t":true,"scrollpercent":true},
+    sidebar: {"position":"left","display":"always","offset":12,"offset_float":0,"b2t":true,"scrollpercent":true,"onmobile":false},
     fancybox: true,
     motion: false,
     duoshuo: {
@@ -163,10 +156,6 @@
 
 
   <title>Hello, Hexo! | Online Blog</title>
-</head>
-
-<body itemscope itemtype="http://schema.org/WebPage" lang="ru">
-
   
 
 
@@ -182,6 +171,9 @@
 
 
 
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="ru">
 
   
   
@@ -558,6 +550,7 @@
   </div>
 
   <aside id="sidebar" class="sidebar">
+    
     <div class="sidebar-inner">
 
       
@@ -787,12 +780,6 @@
 
 
 
-  
-
-
-
-
-
 
 
 
@@ -806,7 +793,7 @@
     var search_path = "search.xml";
     if (search_path.length === 0) {
       search_path = "search.xml";
-    } else if (search_path.endsWith("json")) {
+    } else if (/json$/i.test(search_path)) {
       isXml = false;
     }
     var path = "/" + search_path;
