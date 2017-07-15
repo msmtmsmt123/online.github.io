@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Online Blog</title>
-  <subtitle>Прокачанный блог</subtitle>
+  <title>iNotes</title>
+  <subtitle>Интернет-заметки</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="https://online.github.io/"/>
+  <link href="https://inotes.pp.ua/"/>
   <updated>2017-06-10T16:53:46.000Z</updated>
-  <id>https://online.github.io/</id>
+  <id>https://inotes.pp.ua/</id>
   
   <author>
     <name>Sergey</name>
@@ -17,8 +17,8 @@
   
   <entry>
     <title>Как зашифровать системный диск с помощью BitLocker</title>
-    <link href="https://online.github.io/2017/03/27/kak-zashifrovat-sistemny-disk-s-pomoschyu-bitlocker/"/>
-    <id>https://online.github.io/2017/03/27/kak-zashifrovat-sistemny-disk-s-pomoschyu-bitlocker/</id>
+    <link href="https://inotes.pp.ua/2017/03/27/kak-zashifrovat-sistemny-disk-s-pomoschyu-bitlocker/"/>
+    <id>https://inotes.pp.ua/2017/03/27/kak-zashifrovat-sistemny-disk-s-pomoschyu-bitlocker/</id>
     <published>2017-03-27T17:19:07.000Z</published>
     <updated>2017-06-10T16:53:46.000Z</updated>
     
@@ -40,14 +40,14 @@
     </summary>
     
     
-      <category term="Windows" scheme="https://online.github.io/tags/Windows/"/>
+      <category term="Windows" scheme="https://inotes.pp.ua/tags/Windows/"/>
     
   </entry>
   
   <entry>
     <title>Не работает интернет от Интертелеком на MIUI 8 Global Developer (решение проблемы)</title>
-    <link href="https://online.github.io/2017/03/08/ne-rabotaet-internet-ot-intertelekom-na-miui-8-global-developer/"/>
-    <id>https://online.github.io/2017/03/08/ne-rabotaet-internet-ot-intertelekom-na-miui-8-global-developer/</id>
+    <link href="https://inotes.pp.ua/2017/03/08/ne-rabotaet-internet-ot-intertelekom-na-miui-8-global-developer/"/>
+    <id>https://inotes.pp.ua/2017/03/08/ne-rabotaet-internet-ot-intertelekom-na-miui-8-global-developer/</id>
     <published>2017-03-08T17:59:58.000Z</published>
     <updated>2017-06-10T17:08:26.000Z</updated>
     
@@ -85,16 +85,16 @@
     </summary>
     
     
-      <category term="Android" scheme="https://online.github.io/tags/Android/"/>
+      <category term="Android" scheme="https://inotes.pp.ua/tags/Android/"/>
     
-      <category term="MIUI" scheme="https://online.github.io/tags/MIUI/"/>
+      <category term="MIUI" scheme="https://inotes.pp.ua/tags/MIUI/"/>
     
   </entry>
   
   <entry>
     <title>Афоризмы</title>
-    <link href="https://online.github.io/2017/02/23/aforizmy/"/>
-    <id>https://online.github.io/2017/02/23/aforizmy/</id>
+    <link href="https://inotes.pp.ua/2017/02/23/aforizmy/"/>
+    <id>https://inotes.pp.ua/2017/02/23/aforizmy/</id>
     <published>2017-02-23T21:12:25.000Z</published>
     <updated>2017-06-10T18:22:18.000Z</updated>
     
@@ -136,8 +136,8 @@
   
   <entry>
     <title>Hello, Hexo!</title>
-    <link href="https://online.github.io/2017/02/22/hello-hexo/"/>
-    <id>https://online.github.io/2017/02/22/hello-hexo/</id>
+    <link href="https://inotes.pp.ua/2017/02/22/hello-hexo/"/>
+    <id>https://inotes.pp.ua/2017/02/22/hello-hexo/</id>
     <published>2017-02-21T22:00:00.000Z</published>
     <updated>2017-05-28T16:40:24.000Z</updated>
     
@@ -153,14 +153,14 @@
     </summary>
     
     
-      <category term="Hexo" scheme="https://online.github.io/tags/Hexo/"/>
+      <category term="Hexo" scheme="https://inotes.pp.ua/tags/Hexo/"/>
     
   </entry>
   
   <entry>
     <title>Подборка классных ботов и каналов в Telegram</title>
-    <link href="https://online.github.io/2017/02/10/podborka-klassnyh-botov-i-kanalov-v-telegram/"/>
-    <id>https://online.github.io/2017/02/10/podborka-klassnyh-botov-i-kanalov-v-telegram/</id>
+    <link href="https://inotes.pp.ua/2017/02/10/podborka-klassnyh-botov-i-kanalov-v-telegram/"/>
+    <id>https://inotes.pp.ua/2017/02/10/podborka-klassnyh-botov-i-kanalov-v-telegram/</id>
     <published>2017-02-09T22:35:46.000Z</published>
     <updated>2017-06-29T22:16:03.729Z</updated>
     
@@ -201,14 +201,14 @@
     </summary>
     
     
-      <category term="Telegram" scheme="https://online.github.io/tags/Telegram/"/>
+      <category term="Telegram" scheme="https://inotes.pp.ua/tags/Telegram/"/>
     
   </entry>
   
   <entry>
     <title>Emergency mode при запуске Ubuntu 16.04</title>
-    <link href="https://online.github.io/2017/01/28/emergency-mode-pri-zapuske-ubuntu-16-04/"/>
-    <id>https://online.github.io/2017/01/28/emergency-mode-pri-zapuske-ubuntu-16-04/</id>
+    <link href="https://inotes.pp.ua/2017/01/28/emergency-mode-pri-zapuske-ubuntu-16-04/"/>
+    <id>https://inotes.pp.ua/2017/01/28/emergency-mode-pri-zapuske-ubuntu-16-04/</id>
     <published>2017-01-27T22:00:00.000Z</published>
     <updated>2017-06-10T18:31:49.000Z</updated>
     
@@ -238,7 +238,7 @@
     </summary>
     
     
-      <category term="Ubuntu" scheme="https://online.github.io/tags/Ubuntu/"/>
+      <category term="Ubuntu" scheme="https://inotes.pp.ua/tags/Ubuntu/"/>
     
   </entry>
   
