@@ -1,0 +1,3 @@
+User-agent: *
+Host: inotes.pp.ua
+Sitemap: https://inotes.pp.ua/sitemap.xml
