@@ -1910,7 +1910,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #e7ffde;
+  background: #6adbac;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3077,21 +3077,21 @@ pre .javascript .function {
   bottom: auto;
 }
 kbd {
-  padding: 2px 5px;
-  border: #ccc 1px solid;
-  color: #666;
-  text-shadow: #fff 0 1px 0;
-  font-size: 90%;
-  font-weight: 700;
-  background: #f4f4f4;
-  border-radius: 4px;
-  box-shadow: 0 1px 0 rgba(0,0,0,0.2), 0 1px 0 0 #fff inset;
+  padding: 2px 5px !important;
+  border: #ccc 1px solid !important;
+  color: #666 !important;
+  text-shadow: #fff 0 1px 0 !important;
+  font-size: 90% !important;
+  font-weight: 700 !important;
+  background: #f4f4f4 !important;
+  border-radius: 4px !important;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.2), 0 1px 0 0 #fff inset !important;
 }
 mark {
-  padding: 0 4px;
-  background: #fff3bc;
-  font-weight: inherit;
-  font-style: inherit;
-  position: relative;
-  white-space: pre-wrap;
+  padding: 0 4px !important;
+  background: #fff3bc !important;
+  font-weight: inherit !important;
+  font-style: inherit !important;
+  position: relative !important;
+  white-space: pre-wrap !important;
 }
