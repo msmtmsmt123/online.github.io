@@ -30,6 +30,7 @@
 
 
 
+
   <meta name="yandex-verification" content="b46f99b5390f364d" />
 
 
@@ -139,7 +140,7 @@
 <meta property="og:site_name" content="iNotes">
 <meta property="og:description" content="Список интересных групп, каналов и ботов в Телеграме (пополняется). Если у вас есть интересные каналы, группы, чаты или боты, пожалуйста, делитесь в комментариях к данной заметке. С удовольствием внес">
 <meta property="og:locale" content="ru">
-<meta property="og:updated_time" content="2017-06-29T22:16:03.729Z">
+<meta property="og:updated_time" content="2017-06-29T22:16:03.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Подборка классных ботов и каналов в Telegram">
 <meta name="twitter:description" content="Список интересных групп, каналов и ботов в Телеграме (пополняется). Если у вас есть интересные каналы, группы, чаты или боты, пожалуйста, делитесь в комментариях к данной заметке. С удовольствием внес">
@@ -155,7 +156,7 @@
     sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":true,"scrollpercent":true,"onmobile":false},
     fancybox: true,
     tabs: true,
-    motion: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn"}},
     duoshuo: {
       userId: '0',
       author: 'Автор'
@@ -206,7 +207,7 @@
     
   
 
-  <div class="container sidebar-position-left page-post-detail ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -252,22 +253,22 @@
         </li>
       
         
-        <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            Архив
-          </a>
-        </li>
-      
-        
         <li class="menu-item menu-item-tags">
           <a href="/tags/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
             Тэги
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Архив
           </a>
         </li>
       
@@ -375,7 +376,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-              <time title="Дата создания записи" itemprop="dateCreated datePublished" datetime="2017-02-10T00:35:46+02:00">
+              <time title="Дата создания записи" itemprop="dateCreated datePublished" datetime="2017-02-10T01:35:46+03:00">
                 10.02.2017
               </time>
             
@@ -617,14 +618,11 @@
 
       <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="/images/avatar.gif"
-               alt="Sergey" />
-          <p class="site-author-name" itemprop="name">Sergey</p>
-           
-              <p class="site-description motion-element" itemprop="description"></p>
-           
+          
+            <p class="site-author-name" itemprop="name">Sergey</p>
+            <p class="site-description motion-element" itemprop="description"></p>
         </div>
+
         <nav class="site-state motion-element">
 
           
@@ -826,11 +824,11 @@
 
 
 
-  
   <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
 
 
+  
 
   
 

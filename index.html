@@ -30,6 +30,7 @@
 
 
 
+
   <meta name="yandex-verification" content="b46f99b5390f364d" />
 
 
@@ -150,7 +151,7 @@
     sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":true,"scrollpercent":true,"onmobile":false},
     fancybox: true,
     tabs: true,
-    motion: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn"}},
     duoshuo: {
       userId: '0',
       author: 'Автор'
@@ -202,8 +203,7 @@
   
 
   <div class="container sidebar-position-left 
-   page-home 
- ">
+  page-home">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -249,22 +249,22 @@
         </li>
       
         
-        <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            Архив
-          </a>
-        </li>
-      
-        
         <li class="menu-item menu-item-tags">
           <a href="/tags/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
             Тэги
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Архив
           </a>
         </li>
       
@@ -855,7 +855,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://inotes.pp.ua/2017/02/23/aforizmy/">
+    <link itemprop="mainEntityOfPage" href="https://inotes.pp.ua/2017/02/24/aforizmy/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Sergey">
@@ -874,7 +874,7 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/02/23/aforizmy/" itemprop="url">Афоризмы</a></h2>
+                <a class="post-title-link" href="/2017/02/24/aforizmy/" itemprop="url">Афоризмы</a></h2>
         
 
         <div class="post-meta">
@@ -913,9 +913,9 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/02/23/aforizmy/#comments" itemprop="discussionUrl">
+                <a href="/2017/02/24/aforizmy/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/02/23/aforizmy/" itemprop="commentCount"></span>
+                        data-disqus-identifier="2017/02/24/aforizmy/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -974,7 +974,7 @@
           <p>В данной заметке буду собирать понравившееся мне афоризмы.</p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/02/23/aforizmy/#more" rel="contents">
+            <a class="btn" href="/2017/02/24/aforizmy/#more" rel="contents">
               Читать полностью &raquo;
             </a>
           </div>
@@ -1554,14 +1554,11 @@
 
       <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="/images/avatar.gif"
-               alt="Sergey" />
-          <p class="site-author-name" itemprop="name">Sergey</p>
-           
-              <p class="site-description motion-element" itemprop="description"></p>
-           
+          
+            <p class="site-author-name" itemprop="name">Sergey</p>
+            <p class="site-description motion-element" itemprop="description"></p>
         </div>
+
         <nav class="site-state motion-element">
 
           
@@ -1747,9 +1744,9 @@
 
 
 
-  
-    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
 
   
 
