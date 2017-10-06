@@ -1084,21 +1084,28 @@ pre .javascript .function {
   display: inline-block;
   padding: 0 20px;
   font-size: 14px;
-  color: #fff;
-  background: #222;
+  color: #555;
+  background: #fff;
   border: 2px solid #555;
   text-decoration: none;
-  border-radius: 0;
+  border-radius: 2px;
   transition-property: background-color;
   transition-duration: 0.2s;
   transition-timing-function: ease-in-out;
   transition-delay: 0s;
+  line-height: 2;
 }
-.btn:hover,
-.post-button .btn:hover {
+.btn:hover {
   border-color: #222;
   color: #fff;
   background: #222;
+}
+.btn +.btn {
+  margin: 0 0 8px 8px;
+}
+.btn .fa-fw {
+  width: 1.285714285714286em;
+  text-align: left;
 }
 .btn-bar {
   display: block;
@@ -1681,18 +1688,6 @@ pre .javascript .function {
 .post-button {
   margin-top: 40px;
 }
-.post-button .btn {
-  color: #555;
-  font-size: 14px;
-  background: #fff;
-  border-radius: 2px;
-  line-height: 2;
-  margin: 0 4px 8px 4px;
-}
-.post-button .fa-fw {
-  width: 1.285714285714286em;
-  text-align: left;
-}
 .posts-expand .post-tags {
   margin-top: 40px;
   text-align: center;
@@ -1795,6 +1790,10 @@ pre .javascript .function {
   justify-content: center;
   flex-wrap: wrap;
   align-items: center;
+}
+.post-widgets .post-meta-divider {
+  height: 28px;
+  color: #999;
 }
 .wp_rating {
   height: 20px;
@@ -2000,7 +1999,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #fbff7c;
+  background: #e7afaa;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2538,6 +2537,29 @@ pre .javascript .function {
   content: "|";
   padding-left: 10px;
 }
+#needsharebutton-postbottom {
+  position: relative;
+  cursor: pointer;
+  height: 26px;
+}
+#needsharebutton-postbottom .btn {
+  display: initial;
+  padding: 1px 4px;
+  border: 1px solid #555;
+  border-radius: 3px;
+}
+#needsharebutton-float {
+  position: fixed;
+  bottom: 38px;
+  left: -8px;
+  z-index: 9999;
+  cursor: pointer;
+}
+#needsharebutton-float .btn {
+  padding: 0 10px 0 14px;
+  border: 1px solid #555;
+  border-radius: 4px;
+}
 .page-archive .archive-page-counter {
   position: relative;
   top: 3px;
@@ -3014,7 +3036,7 @@ pre .javascript .function {
   opacity: 1;
 }
 .sidebar {
-  margin-left: -50%;
+  margin-left: -100%;
   right: auto;
   bottom: auto;
   -webkit-transform: none;
